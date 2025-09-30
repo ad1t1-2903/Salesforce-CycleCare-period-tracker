@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Link_required_for_Online_mode</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISPICKVAL( Mode__c , &quot;Online&quot; ),
+  ISBLANK( Meeting_Link__c )
+)</errorConditionFormula>
+    <errorDisplayField>Meeting_Link__c</errorDisplayField>
+    <errorMessage>Meeting Link required for Online appointments.</errorMessage>
+</ValidationRule>

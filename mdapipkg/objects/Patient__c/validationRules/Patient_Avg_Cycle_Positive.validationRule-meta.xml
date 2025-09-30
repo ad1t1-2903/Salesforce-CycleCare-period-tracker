@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patient_Avg_Cycle_Positive</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT( ISBLANK( Average_Cycle_Length__c ) ),
+  Average_Cycle_Length__c &lt;= 0
+)</errorConditionFormula>
+    <errorMessage>Average Cycle Length must be greater than 0.</errorMessage>
+</ValidationRule>

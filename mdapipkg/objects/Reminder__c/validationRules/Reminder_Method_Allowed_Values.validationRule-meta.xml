@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reminder_Method_Allowed_Values</fullName>
+    <active>true</active>
+    <description>Method must be Email or SMS (picklist)</description>
+    <errorConditionFormula>NOT(
+  OR(
+    ISPICKVAL( Method__c , &quot;Email&quot; ),
+    ISPICKVAL( Method__c , &quot;SMS&quot; )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Method__c</errorDisplayField>
+    <errorMessage>Reminder Method must be Email or SMS.</errorMessage>
+</ValidationRule>
